@@ -11,6 +11,6 @@ def fibbonacci_r(n):
 
 temp1, temp2 = -1, 1
 n = int(input("Enter the last number of series: "))
-print("\nFibbonacci series is 0 to",n,": ")
+print("\nFibbonacci series is 0 to",n,":- ")
 fibbonacci_r(n)
 print()

@@ -20,4 +20,4 @@ for number in range(0,temp):
             continue
     else:
         print("\nGame Over")
-        print("The secret number is",rand_num)
+        print("The secret value is",rand_num)
