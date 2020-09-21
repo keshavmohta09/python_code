@@ -25,6 +25,6 @@ while True:
        print("|0   0|")
        print("|0   0|")
        print("|0   0|")
-    cont = input("press y to roll again else press any key to exit: ")
-    if cont not in ['Y','y']:
+    cont = input("press Enter to roll again else press any key to exit: ")
+    if cont != '':
         exit()
