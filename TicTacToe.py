@@ -1,8 +1,8 @@
 print("\n**********Welcome to Tic Tac Toe Game**********\n\n")
 player1 = input("Enter the name of player 1: ")
 player2 = input("Enter the name of player 2: ")
-place = [' ',' ',' ',' ',' ',' ',' ',' ',' ',' '] #to print pattern
-check_choice = [0,0,0,0,0,0,0,0,0,0]              #to check already exist input
+place = [' ']*10 #to print pattern
+check_choice = [0]*10                             #to check already exist input
 temp_count = 1                                    #for all 9 choices
 local = 0                                         #to declaring result
 count_choice = 1                                  #to fill the check_choice list
@@ -67,14 +67,14 @@ while temp_count<10:
                 print("\n-------------------")
     print()
     temp_count+=1
-    if (place[1]==place[2] and place[2]==place[3] and place[3]=='X') or \
-        (place[4]==place[5] and place[5]==place[6] and place[6]=='X') or \
-        (place[7]==place[8] and place[8]==place[9] and place[9]=='X') or \
-        (place[1]==place[4] and place[4]==place[7] and place[7]=='X') or \
-        (place[2]==place[5] and place[5]==place[8] and place[8]=='X') or \
-        (place[3]==place[6] and place[6]==place[9] and place[9]=='X') or \
-        (place[1]==place[5] and place[5]==place[9] and place[9]=='X') or \
-        (place[3]==place[5] and place[5]==place[7] and place[7]=='X'):
+    if (place[1] == place[2] == place[3] == 'X') or \
+        (place[4] == place[5] == place[6] == 'X') or \
+        (place[7] == place[8] == place[9] == 'X') or \
+        (place[1] == place[4] == place[7] == 'X') or \
+        (place[2] == place[5] == place[8] == 'X') or \
+        (place[3] == place[6] == place[9] == 'X') or \
+        (place[1] == place[5] == place[9] == 'X') or \
+        (place[3] == place[5] == place[7] == 'X'):
         print('\n',player1,'win\n')
         local+=1
         break
@@ -93,14 +93,14 @@ while temp_count<10:
                 print("\n-------------------")
         print()
         temp_count += 1
-        if (place[1] == place[2] and place[2] == place[3] and place[3] == 'O') or \
-            (place[4] == place[5] and place[5] == place[6] and place[6] == 'O') or \
-            (place[7] == place[8] and place[8] == place[9] and place[9] == 'O') or \
-            (place[1] == place[4] and place[4] == place[7] and place[7] == 'O') or \
-            (place[2] == place[5] and place[5] == place[8] and place[8] == 'O') or \
-            (place[3] == place[6] and place[6] == place[9] and place[9] == 'O') or \
-            (place[1] == place[5] and place[5] == place[9] and place[9] == 'O') or \
-            (place[3] == place[5] and place[5] == place[7] and place[7] == 'O'):
+        if (place[1] == place[2] == place[3] == 'O') or \
+            (place[4] == place[5] == place[6] == 'O') or \
+            (place[7] == place[8] == place[9] == 'O') or \
+            (place[1] == place[4] == place[7] == 'O') or \
+            (place[2] == place[5] == place[8] == 'O') or \
+            (place[3] == place[6] == place[9] == 'O') or \
+            (place[1] == place[5] == place[9] == 'O') or \
+            (place[3] == place[5] == place[7] == 'O'):
             print('\n',player2, 'win')
             local+=1
             break
