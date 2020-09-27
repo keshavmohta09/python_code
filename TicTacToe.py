@@ -51,7 +51,7 @@ for i in range(1,10):
         print("  | ",end='')
     if i==3 or i==6:
         print("\n-------------------")
-print("\n\nPress any number for each place\n",player1,"'s choice is X\n",player2,"'s choice is O\n")
+print("\n\nPress any number for each place\n%s's choice is X\n%s's choice is O\n"%(player1,player2))
 while temp_count<10:
     func_for_player1()
     check_choice[count_choice] = choice1

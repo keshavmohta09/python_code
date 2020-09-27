@@ -19,28 +19,28 @@ print(line4)
 print(line5)
 print(line6)
 
-print("\nYou have 1 minute")
-enter = input("Please Enter to continue.....")
+enter = input("\nPlease Enter to continue.....")
 if enter=='':
     print("Type...........")
     t1 = time.time()
     for j in range(1,7):
-        word = ''
         type_t = input()
         if type_t == '':
             break
-        type_t+=' '
-        for i in range(len(type_t)):
-            if type_t[i] == ' ':
-                if word in line[j]:
-                    acrt+=1
-                else:
-                    word = word+'-(line'+str(j)+')  '
-                    wrong.append(word)
-                word = ''
-                count+=1
+        fline = line[j].split()
+        ty_sp = type_t.split()
+        if len(ty_sp)>len(fline):
+            extra = len(ty_sp)-len(fline)
+            for ex in range(extra):
+                ty_sp.pop()
+
+        for i in range(len(ty_sp)):
+            if  ty_sp[i] == fline[i]:
+                acrt+=1
             else:
-                word+=type_t[i]
+                word = ty_sp[i] + '-(line' + str(j) + ')  '
+                wrong.append(word)
+            count+=1
     t2 = time.time()
     t = (t2-t1)/60
     acrtt = acrt
