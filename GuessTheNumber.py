@@ -1,7 +1,6 @@
 from random import randint
 rand_num = randint(1,100)
-guess = 8
-temp = guess
+guess = temp = 8
 print("You have",guess,"guesses")
 for number in range(0,temp):
     num = int(input("Guess the value: "))

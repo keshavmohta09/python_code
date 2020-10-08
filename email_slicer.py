@@ -1,13 +1,5 @@
 email = input("Enter your mail id: ")
-username = ''
-domain = ''
-for i in range(len(email)):
-    if email[i]!='@':
-        username=username+email[i]
-    else:
-        print("Username: ", username)
-        for j in range(i+1,len(email)):
-            if email[j]!='.':
-                domain = domain+email[j]
-            else:
-                print("Domain: ",domain)
+email = email.split('@')
+print(f"Username: {email[0]}")
+domain = str(email[1]).split('.')
+print(f"Domain: {domain[0]}")

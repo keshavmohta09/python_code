@@ -1,5 +1,4 @@
-import random
-import string
+import random,string
 x=1                             #for run again same command using loop
 while x==1:
     digit = input("Enter the numbers of digits of password: ")
