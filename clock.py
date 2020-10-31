@@ -2,7 +2,7 @@ from time import sleep
 from datetime import *
 from os import system
 
-while i:=True:
+while True:
     t1 = input("Set the alarm time in [hh:mm:ss] format: ")
     try:
         c_t1 = datetime.strptime(t1,"%H:%M:%S")
@@ -25,6 +25,6 @@ if sec_t1<sec_t2:
 else:
     print("Your alarm is set for today at",c_t1)
 
-sec = sec_t1-sec_t2
+sec = sec_t1 - sec_t2
 sleep(sec)
 system('play -nq -t alsa synth {} sine {}'.format(60, 3000))

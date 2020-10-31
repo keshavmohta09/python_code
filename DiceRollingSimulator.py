@@ -1,6 +1,7 @@
 from random import randint
 while True:
     r = randint(1,6)
+    print('┌-----┐')
     if r==1:
        print("|     |")
        print("|  0  |")
@@ -25,6 +26,7 @@ while True:
        print("|0   0|")
        print("|0   0|")
        print("|0   0|")
+    print('└-----┘')
     cont = input("press Enter to roll again else press any key to exit: ")
     if cont != '':
         exit()

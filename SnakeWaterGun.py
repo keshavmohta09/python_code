@@ -5,9 +5,7 @@ comp_point = 0
 
 def statement():
     '''This function is only for instructions printing.'''
-    print("Press 1 for Snake")
-    print("Press 2 for Water")
-    print("Press 3 for Gun")
+    print("Press 1 for Snake\nPress 2 for Water\nPress 3 for Gun")
 
 def check_choice(name,choice):
     '''The work of this function is to print what User/Computer choose.'''

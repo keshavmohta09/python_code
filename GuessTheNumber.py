@@ -5,7 +5,7 @@ print("You have",guess,"guesses")
 for number in range(0,temp):
     num = int(input("Guess the value: "))
     if num==rand_num and guess>0:
-        print("\nYou win in",(temp+1-guess),"guess")
+        print("\n**********You win**********")
         break
     elif num!=rand_num and guess>1:
         guess -= 1
@@ -18,5 +18,5 @@ for number in range(0,temp):
             print("\nNow you have", guess, "guess")
             continue
     else:
-        print("\nGame Over")
+        print("\n**********Game Over**********")
         print("The secret value is",rand_num)
