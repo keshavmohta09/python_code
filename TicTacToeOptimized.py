@@ -42,19 +42,18 @@ def check_all_conditions(player,choice,Xor0):
     return True
 
 while temp_count<10:
-    for counting in range(2):
-        if counting==0: player, Xor0 = player1, 'X'
-        else:   player, Xor0 = player2, 'O'
-        if check_choice[9]!=0:
-            print("\n🤝🤝🤝🤝 Draw 🤝🤝🤝🤝\n")
-            exit()
-        while True:
-            choice = input("%s's choice: "%(player))
-            if choice in ('1','2','3','4','5','6','7','8','9'):
-                choice = int(choice)
-                exitloop = check_all_conditions(player,choice,Xor0)
-                if exitloop:  break
-            else:
-                print("Enter the correct choice")
-        check_choice[temp_count] = choice
-        temp_count+=1
+    if temp_count%2!=0: player, Xor0 = player1, 'X'
+    else:   player, Xor0 = player2, 'O'
+    while True:
+        choice = input("%s's choice: "%(player))
+        if choice in ('1','2','3','4','5','6','7','8','9'):
+            choice = int(choice)
+            exitloop = check_all_conditions(player,choice,Xor0)
+            if exitloop:  break
+        else:
+            print("Enter the correct choice")
+    check_choice[temp_count] = choice
+    if check_choice[9]!=0:
+        print("\n🤝🤝🤝🤝 Draw 🤝🤝🤝🤝\n")
+        exit()
+    temp_count+=1
