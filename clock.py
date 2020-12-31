@@ -27,4 +27,4 @@ else:
 
 sec = sec_t1 - sec_t2
 sleep(sec)
-system('play -nq -t alsa synth {} sine {}'.format(60, 3000))
+system('play -nq -t alsa synth {} sine {}'.format(50, 200))

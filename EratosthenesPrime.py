@@ -1,19 +1,10 @@
-n = int(input("Enter the value of n>1 : "))
-allnum = [i for i in range(2,n+1)]
-temp = len(allnum)+1
-j = 0
-k = 1
-while True:
-    j+=1
-    k+=1
-    while True:
-        if k not in allnum and k!=temp:
-            k+=1
-        else:
-            break
-    if k==temp:
-        break
-    for i in allnum[j:]:
-        if i%k==0:
-            allnum.remove(i)
-print(allnum)
+def EratosthenesPrime(n):
+    prime_list = [i for i in range(2,n+1)]
+    for i in prime_list:
+        for j in prime_list:
+            if( i!=j and j%i==0):
+                prime_list.remove(j)
+    return prime_list
+
+n = int(input("Enter the value of n(>1) : "))
+print(EratosthenesPrime(n))

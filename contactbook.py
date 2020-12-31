@@ -1,4 +1,4 @@
-class contactbook:
+class Contactbook:
 
     def savecontact(self,name,number,email,address):
         details = f"Name = {name} | Contact no. = {number} | E-mail = {email} | Address = {address}\n"
@@ -23,7 +23,7 @@ class contactbook:
         file.close()
         exit()
 
-contact = contactbook()
+contact = Contactbook()
 while True:
     choice = input("Enter 1 for save the contact else press 2 for search the contact: ")
     if choice=='1':

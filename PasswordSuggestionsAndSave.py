@@ -23,7 +23,14 @@ for j in range(5):
         i+=1
         if i<=digit: password.append(random.choice(string.ascii_lowercase))
         i+=1
-        if i<=digit: password.append(random.choice(string.punctuation))
+        while True:
+            q = random.choice(string.punctuation)
+            if i<=digit:
+                if i!=',': 
+                    password.append(q)
+                    break
+            else:
+                break
         i+=1
         if i<=digit: password.append(random.randint(0,9))
         i+=1
@@ -47,12 +54,12 @@ while x==1:
                 else: x+=1
             except: print("Enter a valid suggestion")
         massage_save = input("Which account is this password: ")
-        file = open("password.txt","a")                         #to save password in this file
+        file = open("password.csv","a")                         #to save password in this file
         listToStr = ''.join(map(str, temp_l[pass_save-1]))      #to convert list to string
-        listToStr = listToStr + "    (" + massage_save + ")\n"
+        listToStr = listToStr + "," + massage_save + "\n"
         file.write(listToStr)
         file.close()
-        print("Your password save in 'password.txt' file")
+        print("Your password save in 'password.csv' file")
     elif ask_save == 'N' or ask_save == 'n':
         exit()
     else: print("Enter the correct command")

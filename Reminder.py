@@ -23,6 +23,7 @@ crtm = crtm - datetime(1900,1,1)
 sec1 = crtm.total_seconds()
 play1('Your reminder is set')
 sleep(sec2-sec1)
+
 window = Tk()
 window.title("Reminder")
 window.geometry('1000x100')

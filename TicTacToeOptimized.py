@@ -19,14 +19,13 @@ def check_all_conditions(player,choice,Xor0):
         if check_choice[i] == choice:
             print("This number is already used")
             return False
-    for i in range(1, 10):
-        if choice == i:
-            place[i] = Xor0
-        print(' ', place[i], end='')
-        if i in (1,2,4,5,7,8):
-            print("  | ", end='')
-        if i in (3,6):
-            print("\n-----+------+------")
+
+    place[choice] = Xor0
+    print(f"  {place[1]}  |  {place[2]}  |  {place[3]} ")
+    print("-----+-----+-----")
+    print(f"  {place[4]}  |  {place[5]}  |  {place[6]} ")
+    print("-----+-----+-----")
+    print(f"  {place[7]}  |  {place[8]}  |  {place[9]} ")
     print()
 
     if (place[1] == place[2] == place[3] == Xor0) or \

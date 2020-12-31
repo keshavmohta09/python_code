@@ -1,0 +1,4 @@
+Name : Keshav|Age : 18|Weight : 58.5|Height(inch) : 68|
+Name : Shubham Mohta|Age : 20|Weight : 61.0|Height(inch) : 64|
+Name : Shubham|Age : 20|Weight(kg) : 61.0|Height(inch) : 64|
+Name : Hello|Age : 12|Weight(kg) : 5.0|Height(inch) : 23|

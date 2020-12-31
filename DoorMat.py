@@ -7,41 +7,24 @@
 ------.|..|..|.------
 ---------.|.---------
 '''
+from time import sleep
 while True:
     m = int(input("Enter the odd value of m : "))
     if m%2!=0:
         break
 n = 3*m
 t = 1
+print('\nProcessing..........\n')
+sleep(1)
 for i in range(1,m+1):
+    sleep(.05)
     if i<(m+1)//2:
-        q = 3*t
+        q = '.|.'*t
         t+=2
-        for j in range((n-q)//2):
-            print('-',end='')
-        dsgn = 1
-        while(dsgn<q):
-            print('./.',end='')
-            dsgn+=3
-        for j in range((n-q)//2):
-            print('-',end='')
-        print()
+        print(q.center(n,'-'))
     elif i==(m+1)//2:
-        for i in range((n-7)//2):
-            print('-',end='')
-        print('WELCOME',end='')
-        for i in range((n-7)//2):
-            print('-',end='')
-        print()
+        print('WELCOME'.center(n,'-'))
     else:
         t-=2
-        q=3*t
-        for j in range((n-q)//2):
-            print('-',end='')
-        dsgn = 1
-        while (dsgn<q):
-            print('./.',end='')
-            dsgn += 3
-        for j in range((n-q)//2):
-            print('-',end='')
-        print()
+        q='.|.'*t
+        print(q.center(n,'-'))
