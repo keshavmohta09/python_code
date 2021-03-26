@@ -1,6 +1,1 @@
-num = int(input("Enter the number: "))
-temp = 0
-while temp!=10:
-    temp+=1
-    table = num*temp
-    print(num,"X",temp,"=",table)
+print('\n'.join(list(filter(lambda x : len(x)%2==0, input("Enter the words seperated by space : ").split()))))

@@ -4,6 +4,7 @@ def EratosthenesPrime(n):
         for j in prime_list:
             if( i!=j and j%i==0):
                 prime_list.remove(j)
+        kk+=1
     return prime_list
 
 n = int(input("Enter the value of n(>1) : "))

@@ -3,20 +3,17 @@ class RightLeftCentre:
     def __init__(self,mainstring):
         self.mainstr = mainstring
 
-    def rights(self,string,n):
-        for i in range(n):
-            self.mainstr = self.mainstr+string
-        return self.mainstr
-
     def lefts(self,string,n):
-        for i in range(n):
-            self.mainstr =  string+self.mainstr
-        return self.mainstr
+        string*=n
+        return string+self.mainstr
+
+    def rights(self,string,n):
+        string*=n
+        return self.mainstr+string
 
     def centres(self,string,n):
-        for i in range(n):
-            self.mainstr = string+self.mainstr+string
-        return self.mainstr
+        string*=n
+        return string+self.mainstr+string
 
 if __name__ == "__main__":
     str = 'Keshav'
@@ -24,3 +21,4 @@ if __name__ == "__main__":
     print(a.centres('+-*/',5))
     print(a.lefts('=',5))
     print(a.rights('=',5))
+    print(a.centres('=',2))

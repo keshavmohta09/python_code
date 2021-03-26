@@ -9,4 +9,4 @@ while True:
             if i%j == 0:
                 break
         else:   print(i,end=' ')
-    exit()
+    exit('\n')
