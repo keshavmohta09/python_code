@@ -26,7 +26,7 @@ for j in range(5):
         while True:
             q = random.choice(string.punctuation)
             if i<=digit:
-                if i!=',': 
+                if i!=',':
                     password.append(q)
                     break
             else:

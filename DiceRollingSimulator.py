@@ -4,28 +4,28 @@ while True:
     print('┌-----┐')
     if r==1:
        print("|     |")
-       print("|  0  |")
+       print("|  ●  |")
        print("|     |")
     elif r==2:
-       print("|0    |")
+       print("|●    |")
        print("|     |")
-       print("|    0|")
+       print("|    ●|")
     elif r==3:
-       print("|0    |")
-       print("|  0  |")
-       print("|    0|")
+       print("|●    |")
+       print("|  ●  |")
+       print("|    ●|")
     elif r==4:
-       print("|0   0|")
+       print("|●   ●|")
        print("|     |")
-       print("|0   0|")
+       print("|●   ●|")
     elif r==5:
-       print("|0   0|")
-       print("|  0  |")
-       print("|0   0|")
+       print("|●   ●|")
+       print("|  ●  |")
+       print("|●   ●|")
     else:
-       print("|0   0|")
-       print("|0   0|")
-       print("|0   0|")
+       print("|●   ●|")
+       print("|●   ●|")
+       print("|●   ●|")
     print('└-----┘')
     cont = input("press Enter to roll again else press any key to exit: ")
     if cont != '':
